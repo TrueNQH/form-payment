@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+body {
+  font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; /* căn giữa theo trục ngang */
+    align-items: center; /* căn giữa theo trục dọc */
+    min-height: 100vh; /* chiều cao tối thiểu bằng chiều cao viewport */
+    margin: 0; /* loại bỏ lề mặc định */
+    background-color: #f6f6f6;
+   
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.payment-form {
+  
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.payment-form label {
+  display: block;
+  margin-bottom: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.payment-form input {
+  width: 92%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.payment-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.payment-form input[type="submit"] {
+  width: 100%;
+  background-color: #4CAF50;
   color: white;
+  cursor: pointer;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+.payment-form input[type="submit"]:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* CSS Media Query for tablet devices */
+@media only screen and (min-width: 600px) {
+  .payment-form {
+    width: 800px;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media only screen and (max-width: 599px) {
+  .payment-form {
+      width: 400px; /* Thay đổi giá trị để phù hợp với nhu cầu của bạn */
+  }
+}
+/* CSS Media Query for desktop devices */
+@media only screen and (min-width: 768px) {
+  .payment-form {
+    width: 800px;
+  }
+}
+
+/* CSS Media Query for large desktop devices */
+@media only screen and (min-width: 1200px) {
+  .payment-form {
+    width: 600px;
   }
 }
